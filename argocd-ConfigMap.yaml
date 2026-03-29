@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+data:
+  url: http://localhost:8080
+
+  dex.config: |
+    connectors:
+    - type: github
+      id: github
+      name: GitHub
+      config:
+        clientID: Iv23liFvPUqfflRg2sKw
+        clientSecret: f751c678fd6c2d036d84f0ab8c18fc059f31100d
+        orgs:
+        - name: Nonsocha
+                     
